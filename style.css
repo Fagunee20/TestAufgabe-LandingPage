@@ -1,0 +1,703 @@
+/* ==================================================
+   Global Variables & Base Styles
+   ================================================== */
+
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #1e40af;
+  --dark: #2f343f;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --light: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(90deg, #f1f5f9 0%, #ffffff 12%, #ffffff 88%, #f1f5f9 100%);
+  overflow-x: hidden;
+}
+
+/* ==================================================
+   Layout & Page Wrapper
+   ================================================== */
+.page-wrapper {
+  max-width: 1120px;
+  margin: 70px auto;
+  background: #fff;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.15);
+  position: relative;
+}
+/* ==================================================
+   Navigation
+   ================================================== */
+
+.navbar {
+  padding: 28px 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.brand-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50% 50% 50% 8px;
+  color: #fff;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #24263a;
+  text-transform: uppercase;
+  margin-left: 24px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* ==================================================
+   Shared Utility Classes
+   ================================================== */
+.section-padding {
+  padding: 80px 90px;
+}
+
+/* ==================================================
+   Hero Section
+   ================================================== */
+.hero {
+  min-height: 620px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  right: -115px;
+  top: -135px;
+  width: 630px;
+  height: 630px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  z-index: 0;
+}
+
+.floating-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #bfdbfe;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.dot-one {
+  left: 20px;
+  top: 310px;
+}
+
+.dot-two {
+  left: 80px;
+  top: 430px;
+  width: 11px;
+  height: 11px;
+}
+
+.dot-three {
+  left: 510px;
+  top: 575px;
+  width: 12px;
+  height: 12px;
+}
+
+.hero-content {
+  max-width: 480px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 4.1rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.hero p {
+  max-width: 380px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==================================================
+   Hero Buttons
+   ================================================== */
+
+.btn-main {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  padding: 12px 34px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 12px 25px rgba(59, 130, 246, 0.25);
+}
+
+.btn-main:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+
+.btn-outline-light-blue {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+  border-radius: 6px;
+  padding: 12px 34px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==================================================
+   Hero Carousel
+   ================================================== */
+.hero-image-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+}
+
+#heroCarousel {
+  width: 420px;
+}
+
+.carousel-inner {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 430px;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  box-shadow: 0 22px 50px rgba(30, 64, 175, 0.18);
+}
+
+.slider-badge {
+  position: absolute;
+  left: 25px;
+  bottom: 95px;
+  width: 62px;
+  height: 62px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--primary-dark);
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+  z-index: 10;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+}
+
+.carousel-control-prev {
+  left: -50px;
+}
+
+.carousel-control-next {
+  right: -50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(15, 23, 42, 0.55);
+  border-radius: 50%;
+  padding: 18px;
+}
+
+.carousel-indicators {
+  bottom: -45px;
+}
+
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+}
+
+/* ==================================================
+   Services Section
+   ================================================== */
+.services {
+  padding-top: 25px;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.service-card {
+  min-height: 180px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+  transition: 0.25s ease;
+  border-bottom: 5px solid var(--primary);
+  background: #fff;
+}
+
+.service-card:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-8px);
+}
+
+.service-card:hover p,
+.service-card:hover a,
+.service-card.featured a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.service-icon {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.service-card:hover .service-icon,
+.service-card.featured .service-icon {
+  color: #fff;
+}
+
+.service-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.service-card a {
+  font-size: 11px;
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ==================================================
+   Feature / Process Section
+   ================================================== */
+
+
+.blue-section {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 460px;
+}
+
+.blue-section::before {
+  content: "";
+  position: absolute;
+  left: -160px;
+  top: 50px;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.laptop-circle {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.steps h2 {
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.steps p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.step-item {
+  display: flex;
+  gap: 18px;
+  margin: 18px 0;
+  align-items: flex-start;
+}
+
+.step-number {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.14);
+  font-weight: 700;
+}
+
+/* ==================================================
+   About Company Section
+   ================================================== */
+
+.agency-image {
+  width: 360px;
+  border-radius: 18px;
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.15);
+}
+
+
+/* ==================================================
+   Testimonials
+   ================================================== */
+
+.testimonial-card {
+  border: 0;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.09);
+  padding: 24px;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ==================================================
+   Call To Action
+   ================================================== */
+
+.cta-bar {
+  background: var(--primary);
+  color: #fff;
+  margin: 0 90px -45px;
+  padding: 30px 35px;
+  position: relative;
+  z-index: 3;
+  border-radius: 12px;
+  box-shadow: 0 20px 35px rgba(59, 130, 246, 0.25);
+}
+
+/* ==================================================
+   Footer
+   ================================================== */
+
+footer {
+  background: #2f343f;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 95px 90px 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: -80px;
+  height: 160px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50% 50% 0 0;
+}
+
+footer h5 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+footer p,
+footer li,
+footer a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.social a {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  margin-right: 8px;
+  color: #fff;
+}
+
+/* ==================================================
+   Responsive Styles
+   ================================================== */
+@media (max-width: 991px) {
+  .page-wrapper {
+    margin: 0;
+  }
+
+  .section-padding {
+    padding: 55px 24px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding-top: 30px;
+  }
+
+  #heroCarousel {
+    width: 300px;
+  }
+
+  .hero-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero::before {
+    right: -230px;
+    top: 40px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .carousel-control-prev {
+    left: -35px;
+  }
+
+  .carousel-control-next {
+    right: -35px;
+  }
+
+  .slider-badge {
+    left: 35px;
+    bottom: 55px;
+  }
+
+  .blue-section {
+    text-align: center;
+  }
+
+  .laptop-circle {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 30px;
+  }
+
+  .step-item {
+    text-align: left;
+  }
+
+  .cta-bar {
+    margin: 0 24px -35px;
+  }
+
+  footer {
+    padding: 75px 24px 35px;
+  }
+
+  .nav-link {
+    margin-left: 0;
+  }
+}
+
+
+/* ==================================================
+   Contact Section
+   ================================================== */
+
+.contact-modern {
+  padding: 80px 0;
+ background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+.contact-wrapper {
+  background: #f1f3f6;
+  border-radius: 28px;
+  padding: 70px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 70px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 1px;
+}
+
+.contact-content h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin: 10px 0 20px;
+}
+
+.contact-content p {
+  color: #6b7280;
+  max-width: 420px;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contact-line span {
+  width: 34px;
+  height: 34px;
+  background: #0d6efd;
+  color: #fff;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+
+.contact-line small {
+  display: block;
+  color: #6b7280;
+}
+
+.contact-form-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.1);
+}
+
+.contact-form-card label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea {
+  width: 100%;
+  border: 0;
+  background: #f3f4f6;
+  border-radius: 9px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.contact-form-card button {
+  border: 0;
+  background: #0d6efd;
+  color: #fff;
+  padding: 13px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.contact-form-card button span {
+  background: #fff;
+  color: #0d6efd;
+  border-radius: 50%;
+  padding: 4px 7px;
+  margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .contact-content h2 {
+    font-size: 34px;
+  }
+}
+
+.contact-form-card select {
+  width: 100%;
+  border: 0;
+  background: #f3f4f6;
+  border-radius: 9px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+
+  /* Remove default browser styling */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.contact-form-card select:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.12);
+}
+
+.contact-form-card select option {
+  background: #fff;
+  color: #374151;
+}
+
+

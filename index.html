@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevCraft Digital Agency</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <main class="page-wrapper">
+    <section class="hero section-padding pt-0">
+      <span class="floating-dot dot-one"></span>
+      <span class="floating-dot dot-two"></span>
+      <span class="floating-dot dot-three"></span>
+
+      <!--  Full navigation menu on desktop devices, collapses into a hamburger menu on mobile devices -->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><img class="brand-icon" src="images/BrandIcon.png" alt="Logo"
+            class="logo" />DevCraft</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Start</a></li>
+            <li class="nav-item"><a class="nav-link" href="#agency">Über uns</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--  Hero section with a carousel of images on the right and text content on the left. 
+           The carousel has custom navigation arrows and a badge indicating the current slide number. -->
+
+      <!--  a Bootstrap flexbox utility class. It creates a horizontal layout and vertically centers the content within the row. -->
+      <div class="row align-items-center">
+        <!-- two CSS classes: 
+          "col-lg-5" (Bootstrap grid class for large screens) and 
+          "hero-content" (custom class for styling the hero text). -->
+        <div class="col-lg-5 hero-content">
+          <h1>Digitale Ideen.<br>Sauber entwickelt.</h1>
+          <p>Wir entwickeln professionelle Websites, Webanwendungen und digitale Lösungen für Unternehmen, die online
+            erfolgreich wachsen möchten.</p>
+          <a href="#contact" class="btn btn-main rounded-pill mt-3">Get Started</a>
+        </div>
+        <div class="col-lg-7 hero-image-wrap">
+          <!-- Bootstrap carousel component with the "slide" effect and automatic cycling enabled. -->
+          <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img class="hero-image"
+                  src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Web Development">
+              </div>
+
+              <div class="carousel-item">
+                <img class="hero-image"
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+                  alt="Agency Team">
+              </div>
+
+              <div class="carousel-item">
+                <img class="hero-image"
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+                  alt="Creative Workspace">
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <i class="bi bi-chevron-left custom-arrow"></i>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <i class="bi bi-chevron-right custom-arrow"></i>
+            </button>
+
+          </div>
+
+          <div class="slider-badge" id="sliderBadge">1/3</div>
+
+        </div>
+    </section>
+
+    <!-- services section -->
+    <section id="services" class="services section-padding pt-0">
+      <div class="container py-5">
+        <h2 class="section-title">Wir bieten die besten Dienstleistungen an.</h2>
+        <!-- Required grid: 3 columns on desktop, 1 column on mobile -->
+        <div class="row g-4">
+          <div class="col-12 col-lg-4">
+            <div class="service-card h-100">
+              <div class="service-icon">♕</div>
+              <h3>Web Entwicklung</h3>
+              <p>Moderne Websites, erstellt mit sauberem Code, responsivem Layout und schnellen Ladezeiten.</p>
+              <a href="#">MEHR LESEN</a>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-lg-4">
+            <div class="service-card h-100">
+              <div class="service-icon">▤</div>
+              <h3>UI/UX Design</h3>
+              <p>Benutzerfreundliche Oberflächen, die Ihre Website auf jedem Gerät einfach bedienbar machen.</p>
+              <a href="#">MEHR LESEN</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="service-card h-100">
+              <div class="service-icon">☷</div>
+              <h3>SEO & Performanz</h3>
+              <p>Technische Verbesserungen, die helfen, Ihre Website schneller zu laden und besser zu ranken.</p>
+              <a href="#">MEHR LESEN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blue-section section-padding">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img class="laptop-circle"
+            src="https://images.unsplash.com/photo-1759593218431-6f1585bc14de?q=80&w=704&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Employee in a modern office">
+        </div>
+        <div class="col-lg-6 steps">
+          <h2>Einfache Lösungen!</h2>
+          <p>Wir gestalten den Prozess transparent und einfach – vom ersten Kontakt bis zum finalen Start.</p>
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div><strong>Kontaktieren Sie uns</strong>
+              <p class="mb-0">Erzählen Sie uns, was Sie brauchen und welche Ziele Sie verfolgen.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div><strong>Beratung</strong>
+              <p class="mb-0">Wir planen die technische Struktur und die Designrichtung.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div><strong>Projekt erstellen</strong>
+              <p class="mb-0">Ihre Website ist mit Bootstrap und sauberem Code umgesetzt.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div><strong>Launch</strong>
+              <p class="mb-0">Wir testen, optimieren und veröffentlichen die finale Version.</p>
+            </div>
+          </div>
+          <div class="mt-4 d-flex flex-column flex-lg-row align-items-center">
+            <a href="#contact" class="btn btn-light rounded-pill px-4 py-2 shadow-sm me-3">
+              Kostenlos starten
+            </a>
+
+            <a href="#agency" class="btn btn-outline-light rounded-pill px-4 py-2 me-3 mt-2 mt-lg-0 ">
+              Mehr erfahren
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agency" class="section-padding">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 ">
+          <h2 class="fw-bold mb-4">Unsere Agentur</h2>
+          <p class="text-secondary lh-lg ">DevCraft ist eine kleine Digitalagentur, die sich auf Webentwicklung,
+            UI-Design und Performance konzentriert. Wir erstellen Websites, die professionell aussehen und sowohl
+            auf Mobilgeräten als auch auf Desktop-Computern zuverlässig funktionieren.</p>
+          <a href="#" class="btn btn-main rounded-pill mt-2">Mehr Lesen</a>
+        </div>
+        <div class="col-lg-6 text-center align-items-center d-flex justify-content-center">
+          <img class="agency-image"
+            src="https://images.unsplash.com/photo-1593392611307-50f10585f1f2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Interior of a modern office">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding pt-0">
+      <div class="container">
+        <h2 class="section-title">Was Kunden sagen</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="container py-2">
+                <div class="d-flex align-items-center mb-3"><img class="avatar me-3"
+                    src="https://images.unsplash.com/photo-1560836593-f94795d9ba06?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Client">
+                  <div><strong>Emma Fischer</strong><br><small class="text-secondary">Marketing-Leiter</small></div>
+                </div>
+                <p class="text-secondary small">“Sauberes Design, schnelle Lieferung und sehr professionelle
+                  Kommunikation.”</p>
+                <div style="color: #ffc107;">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="container py-2">
+                <div class="d-flex align-items-center mb-3"><img class="avatar me-3"
+                    src="https://images.unsplash.com/photo-1777446015841-b5c8b08cf7b6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Client">
+                  <div><strong>Daniel Klein</strong><br><small class="text-secondary">Gründer</small></div>
+                </div>
+                <p class="text-secondary small">“Die Landingpage funktioniert auf Desktop und Mobilgeräten einwandfrei.”
+                </p>
+                <div style="color: #ffc107;">★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="container py-2">
+                <div class="d-flex align-items-center mb-3"><img class="avatar me-3"
+                    src="https://images.unsplash.com/photo-1643930756178-8258419552bb?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Client">
+                  <div><strong>Felix Becker</strong><br><small class="text-secondary">Geschäftsführer</small></div>
+                </div>
+                <p class="text-secondary small">“Die Struktur ist klar und die Website wirkt modern..”</p>
+                <div style="color: #ffc107;">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formular -->
+    <section id="contact" class="contact-modern">
+      <div class="container py-5">
+        <!-- <div class="container"> -->
+        <div class="contact-wrapper py-5 mx-4">
+
+          <div class="contact-content">
+            <span class="eyebrow">Wir sind für Sie da</span>
+            <h2><strong>Besprich</strong> ihr Projekt mit uns</h2>
+            <p>
+              Suchen Sie eine moderne Website oder eine individuelle Lösung?
+              Schreib uns kurz, worum es geht.
+            </p>
+
+            <div class="contact-line">
+              <span>✉</span>
+              <div>
+                <small>E-Mail</small>
+                <strong>hello@devcraft.test</strong>
+              </div>
+            </div>
+
+            <div class="contact-line">
+              <span>☎</span>
+              <div>
+                <small>Telefon</small>
+                <strong>+49 123 456789</strong>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form-card">
+            <label>Name</label>
+            <input type="text" placeholder="Max Mustermann">
+
+            <label>E-Mail</label>
+            <input type="email" placeholder="info@deine-domain.de">
+
+            <label>Projektart</label>
+            <select>
+              <option>Bitte auswählen...</option>
+              <option>Website</option>
+              <option>Online-Shop</option>
+            </select>
+
+            <label>Nachricht</label>
+            <textarea rows="4" placeholder="Deine Nachricht..."></textarea>
+
+            <button type="submit" class="btn btn-main rounded-pill mt-3">
+              <span>→</span> Anfrage senden
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row g-4 position-relative" style="z-index:2">
+        <div class="col-lg-4">
+          <h5><img class="brand-icon" src="images/BrandIcon.png" alt="Logo" class="logo" />DevCraft</h5>
+          <p>Digitalagentur für responsive Websites, Webanwendungen und Online-Wachstum.</p>
+          <div class="social"><a href="#">f</a><a href="#">in</a><a href="#">x</a></div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h5>Kontaktieren Uns</h5>
+          <p>+49 123 456789<br>hello@devcraft.test<br>Goethestraße 45 <br>
+            60313 Frankfurt am Main
+            Deutschland</p>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h5>Services</h5>
+          <ul>
+            <li>Web Development</li>
+            <li>UI/UX Design</li>
+            <li>SEO</li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h5>Über uns</h5>
+          <ul>
+            <li>News</li>
+            <li>Portfolio</li>
+            <li>Datenschutzerklärung</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center mt-5 mb-0 position-relative" style="z-index:2">© 2026 DevCraft. Erstellt für die Testaufgabe
+        in der Webentwicklung.</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+     // Find the carousel element and the badge element in the DOM and store references to them in the variables.
+    const carousel = document.getElementById('heroCarousel');
+    const badge = document.getElementById('sliderBadge');
+
+    // Get all carousel items and calculate the total number of slides.
+    const items = carousel.querySelectorAll('.carousel-item');
+    const totalSlides = items.length;
+
+    // Listen for the 'slid.bs.carousel' event, 
+    // which is triggered after a slide transition completes. 
+    // When this event occurs, the callback function is executed
+    carousel.addEventListener('slid.bs.carousel', function () { 
+      const activeIndex = [...items].findIndex(item =>
+        item.classList.contains('active')
+      );
+      // Update the badge text to show the current slide number 
+      // and total slides in the format "current/total".
+      badge.textContent = `${activeIndex + 1}/${totalSlides}`;
+    });
+  });
+</script>
