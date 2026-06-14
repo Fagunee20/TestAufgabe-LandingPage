@@ -558,14 +558,14 @@ footer ul {
    ================================================== */
 
 .contact-modern {
-  padding: 80px 0;
+  padding: 50px 0;
  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
 }
 
 .contact-wrapper {
   background: #f1f3f6;
   border-radius: 28px;
-  padding: 70px;
+  padding: 60px;
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 70px;
@@ -614,8 +614,8 @@ footer ul {
 
 .contact-form-card {
   background: #fff;
-  padding: 32px;
-  border-radius: 22px;
+  padding: 25px;
+  border-radius: 20px;
   box-shadow: 0 18px 45px rgba(0,0,0,.1);
 }
 
@@ -699,5 +699,13 @@ footer ul {
   background: #fff;
   color: #374151;
 }
+/* .turnstile-wrapper {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 

@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+ 
 </head>
 
 <body>
@@ -280,7 +280,7 @@
             <input type="text" placeholder="Max Mustermann">
 
             <label>E-Mail</label>
-            <input type="email" placeholder="info@deine-domain.de">
+            <input type="email" placeholder="info@ihre-domain.de">
 
             <label>Projektart</label>
             <select>
@@ -292,8 +292,9 @@
             <label>Nachricht</label>
             <textarea rows="4" placeholder="Ihre Nachricht..."></textarea>
 
-            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA">
-            </div>
+            <!-- <div class="turnstile-wrapper">
+              <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+            </div> -->
 
             <button type="submit" class="btn btn-main rounded-pill mt-3">
               <span>→</span> Anfrage senden
@@ -363,6 +364,7 @@
       });
     });
   </script>
+   <!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
 </body>
 
 </html>
